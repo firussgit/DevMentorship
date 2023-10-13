@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Quotes Generator - Part 1</title>
+</head>
+
+<body>
+    <h1>Project 1 - Random Quotes Generator</h1>
+    <p>At the end of this project, we'll have a fully functional Random Quotes Generator</p>
+    <p>To achieve that, we need to use JavaScript to add interactions to the user inputs (In this case: "Clicks")</p>
+
+    <br> <!-- We use this to add a break between lines -->
+
+    <p>For now, we'll write some simple JavaScript here on the same file without creating a separate JavaScript file</p>
+    <p>The paragraph that follows will be used as the paragraph that we will change when we click the button below</p>
+
+    <br>
+
+    <p id="target">Click the button to change this text!</p>
+    <button>Click me!</button>
+
+    <script>
+        // To change text in an HTML element, you need to target it so JavaScript knows which element you want to modify
+        // To target an element, you need to either target it using its element name, like: "p, h1, button, etc.." or use a "class" or an "id"
+        // In this case, we have many "p" elements so targeting it using the "p" element wouldn't do the job, in this case, we must add a "class" or an "id" to the element then target it using that
+        // In general, a "class" is used for styling purposes (CSS Stuff) and an "id" to manipulate the page (JS Stuff), in our case, we'll use the "id" approach
+        // I went back and added an "id" of: "target"
+
+        // Now to target the element using the "id", we do what follows:
+        const target = document.querySelector("#target")
+        // Here, we declared a new constant called "target" and used the "document.querySelector" to target an element from the page, then we passed "#target" inside to refer to that specific paragraph
+        // You may ask, the "id" name is "target", why type "#target"? To target an element using the "querySelector" you must include a "#" if you are selecting by an id or a "." if you are selecting with a "class"
+        // If you used the element type like "p, h1, div, etc.." you simply type it down and you're good to go
+
+        // Next, we do the same with the button to add a way to modify that paragraph, we need a button to click!
+        const button = document.querySelector("button") // Note that I used the element name directly since there's one button only on the page
+
+        // To make the button do stuff, you need to attach an "Event Listener", an "Event Listener" tell JavaScript to standby wait for a specific action to happen, in our case we want to wait for a click on the button to happen to do something
+        button.addEventListener("click", () => { // What this says is: Take the button element, attach to it something that listens for a click, if the click happens then run the function
+            target.textContent = "Some new text!" // Here we are saying take the target paragraph we already stored in a variable, take it's text content (The content of that paragraph which is it's text) and change it to this new string
+        })
+        
+        // And guess what? We are done! Yup, you manipulated the page content for the first time
+    </script>
+</body>
+
+</html>

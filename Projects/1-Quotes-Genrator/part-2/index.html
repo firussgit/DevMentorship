@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Quotes Generator - Part 2</title>
+</head>
+
+<body>
+    <h1>Project 1 - Random Quotes Generator</h1>
+    <p>Now, we'll try to output some text from a list to that paragraph</p>
+
+    <p id="target">Click the button to generate a quote</p>
+    <button>Generate</button>
+
+    <script>
+        // A list of quotes to generate one from it on the paragraph and show it to the user
+        const quotes = ["Quote One", "Quote Two", "Quote Three"] // These are not quotes, I know. These are just some simple placeholders
+
+        // Targeting elements
+        const target = document.querySelector("#target")
+        const button = document.querySelector("button")
+
+        // Attaching EventListener
+        button.addEventListener("click", () => {
+            target.textContent = quotes[0] // Here, we are saying pick the first element from the list then put it in the paragraph, you can change the number between [] to show another element from the list
+        })
+
+        // We see that we can only show one element of choice only from the code, by changing the index number between those []
+        // What we want is showing a random element from the list each time we click the button, we'll see that in the next parts!
+    </script>
+</body>
+
+</html>

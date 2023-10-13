@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Quotes Generator - Part 4</title>
+</head>
+
+<body>
+    <h1>Project 1 - Random Quotes Generator</h1>
+    <p>Now, we'll see how to use that number to show a random quote each time we click!</p>
+
+    <p id="target">Click the button to generate a random quote</p>
+    <button>Generate a random quote</button>
+
+    <script>
+        // A list of quotes
+        const quotes = ["Quote One", "Quote Two", "Quote Three"] // Notice we have 3 elements on this list, lists use indexes and indexes start counting from 0 not 1
+        // This list's indexes are: [0, 1, 2]
+        // So, we need to generate a random number between 0 and 2, to do that, we must use a min of 0 and a max of 3, right?
+
+        // Targeting elements
+        const target = document.querySelector("#target")
+        const button = document.querySelector("button")
+
+        // Attaching EventListener
+        button.addEventListener("click", () => {
+            // We used "quotes.length" to make things easier and neater because this "length" property would give us 3 because the length of the array is 3 but the index is 2
+            // We use this because even if we add more elements to our list we shouldn't each time deal with numbers and replace the max value with the appropriate value
+            const randomNumber = Math.floor(Math.random() * (quotes.length - 0) + 0) // We simply stored the random number generated in a constant called "randomNumber"
+            target.textContent = quotes[randomNumber] // Here we passed the variable inside the list index instead of hand coding it each time and this way, each time you click the button a new quote appears!
+        })
+    </script>
+</body>
+
+</html>
