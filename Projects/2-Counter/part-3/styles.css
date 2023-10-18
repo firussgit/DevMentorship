@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+
+button {
+    padding: 10px 15px;
+}
+
+#increment {
+    background-color: blue;
+    color: white;
+}
+
+#decrement {
+    background-color: red;
+    color: white;
+}

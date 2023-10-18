@@ -1,0 +1,25 @@
+/* Let's create some styles */
+
+/* We change the font family from default to sans-serif */
+body {
+    font-family: sans-serif;
+}
+
+/* Now, let's give our buttons a better look */
+/* Here, we are targeting all buttons and applying a general rule to all of them */
+button {
+    /* Here, we are giving some padding to make our buttons look slightly better */
+    padding: 10px 15px;
+}
+
+/* But here, we are targeting a specific one and style each one independently */
+/* For both buttons, we are setting a background color and since black text wouldn't be visible on such colors, we changed it white */
+#increment {
+    background-color: blue;
+    color: white;
+}
+
+#decrement {
+    background-color: red;
+    color: white;
+}

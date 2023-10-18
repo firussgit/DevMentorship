@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+}
+
+button {
+    padding: 10px 15px;
+}
+
+#increment {
+    background-color: blue;
+    color: white;
+}
+
+#decrement {
+    background-color: red;
+    color: white;
+}
+
+/* Reset button styles */
+#reset {
+    background-color: gray;
+    color: white;
+}
+
+/* We'll create 2 classes for positive number with a color of blue and for negative with a color of red */
+.positive {
+    color: blue;
+}
+
+.negative {
+    color: red;
+}
+
+/* Now we need to add these classes to our elements using JavaScript */
